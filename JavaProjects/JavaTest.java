@@ -45,6 +45,18 @@ public class JavaTest
         }
     }
     
+    void AddStudentToList(ArrayList lst, int id, String name, char division, int marks){
+        lst.add(new Student(id, name, division, marks));
+    }
+    void AddStudentToList(ArrayList lst, Student st){
+        lst.add(st);
+    }
+    void AddStudentToList(ArrayList lst, ArrayList<Student> students){
+        for(Student i:students){
+            lst.add(i);
+        }
+    }
+    
     public void main(String[]args){
         
         Student std1 = new Student(1, "praharsh", 'B', 95);
@@ -53,8 +65,8 @@ public class JavaTest
         
         ArrayList<Student> students = new ArrayList<Student>();
         
-        students.add(std1);
-        students.add(std2);
+        AddStudentToList(students, new ArrayList(Arrays.asList(std1, std2)));
+        
         
         for(Student st:students){
             System.out.println(st.getAllValues());
