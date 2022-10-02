@@ -1,2 +1,2 @@
 # java-programs
- A collection of Java Programs.
+ A collection of Simple Java Programs.
